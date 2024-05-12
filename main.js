@@ -1,6 +1,7 @@
 let container = document.querySelector('.container');
 let n = 16;
 let color = 'red';
+let containerOpacity = 1;
 const body = document.querySelector('body')
 
 function generateRandomColor() {
@@ -42,8 +43,12 @@ clearButton.onclick = () => {
             return;
         }
     }
+    if (containerOpacity > 0) {
+        containerOpacity -= 0.1;
+    }
     n = userInput;
     renderGrid(n);
+    container.style['opacity'] = containerOpacity;
 }
 
 renderGrid(n);
