@@ -3,6 +3,11 @@ let n = 16;
 let color = 'red';
 const body = document.querySelector('body')
 
+function generateRandomColor() {
+    let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+
 function renderGrid(size) {
     body.removeChild(container);
     container = document.createElement('div');
@@ -14,7 +19,7 @@ function renderGrid(size) {
             let cell = document.createElement('div');
             cell.className = 'grid-cell';
             cell.addEventListener('mouseover', () => {
-                cell.style['background-color'] = color;
+                cell.style['background-color'] = generateRandomColor();
             })
             row.append(cell);
         }
