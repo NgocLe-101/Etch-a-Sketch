@@ -28,3 +28,20 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+button {
+    margin-bottom: 25px;
+    margin-top: 12px;
+    background-color: #066eff;
+    color:white;
+    border: 1px solid #066eff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: "Poetsen One", sans-serif;
+}
+
+button:hover {
+    background-color: #0044cc;
+    border: 1px solid #0044cc;
+    cursor: pointer;
+}
