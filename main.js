@@ -30,7 +30,11 @@ function renderGrid(size) {
 
 const clearButton = document.querySelector('.clear-button');
 clearButton.onclick = () => {
-    let userInput = parseInt(prompt('Enter the grid size: '));
+    let userInput = prompt('Enter the grid size: ');
+    if (userInput === null) {
+        return;
+    }
+    userInput = parseInt(userInput);
     while (isNaN(userInput) || userInput < 1 || userInput > 100) {
         alert("Grid size has to be a number between 1 and 100!")
         userInput = parseInt(prompt('Enter the grid size: '));
