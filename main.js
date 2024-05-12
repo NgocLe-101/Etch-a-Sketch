@@ -38,6 +38,9 @@ clearButton.onclick = () => {
     while (isNaN(userInput) || userInput < 1 || userInput > 100) {
         alert("Grid size has to be a number between 1 and 100!")
         userInput = parseInt(prompt('Enter the grid size: '));
+        if (userInput === null) {
+            return;
+        }
     }
     n = userInput;
     renderGrid(n);
